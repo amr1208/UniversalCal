@@ -15,6 +15,16 @@ public class opStack {
 		}
 		return false;
 	}
+	
+	
+	public void push(Symbol i) {
+		Entry operator = new Entry(i);
+		opStack.push(operator);
+
+	}
+
+
+
 
 
 }
