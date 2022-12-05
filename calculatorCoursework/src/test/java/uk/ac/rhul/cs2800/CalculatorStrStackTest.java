@@ -40,8 +40,21 @@ class CalculatorStrStackTest {
   }
 
   // test 4
+  // test to sure program doesn't break when trying to pop off an empty stack
   @Test
   void emptyPopTest() {
+    assertThrows(EmptyStackException.class, () -> strS.strPop(),
+        "You cannot pop from an empty stack");
+  }
+
+  // test 5
+  // test designed to see if pop and push methods work in tamdem
+  // code modified from numstack, but getValue has been switched to getString.
+  @Test
+  void pushThenPopTest() {
+    strS.push("dell");
+    assertEquals(strS.strPop(), "dell", "Pushed dell so popping should return a dell");
+    assertEquals(strS.isEmpty(), true, "Test to check whether stack is empty.");
     assertThrows(EmptyStackException.class, () -> strS.strPop(),
         "You cannot pop from an empty stack");
   }

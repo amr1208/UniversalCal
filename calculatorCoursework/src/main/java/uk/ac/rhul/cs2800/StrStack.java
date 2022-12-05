@@ -32,7 +32,7 @@ public class StrStack {
   }
 
   /**
-   *Method faciliates strings to be pushed onto the stack.
+   * Method faciliates strings to be pushed onto the stack.
    *
    * @paramString i is a string
    */
@@ -43,7 +43,7 @@ public class StrStack {
   }
 
   /**
-   *method to pop string values off stack.
+   * method to pop string values off stack.
    *
    * @return String or exception
    */
@@ -51,6 +51,7 @@ public class StrStack {
     if (strStack.size == 0) {
       throw new EmptyStackException();
     }
-    return null;
+    String result = strStack.pop().getString();
+    return result;
   }
 }
