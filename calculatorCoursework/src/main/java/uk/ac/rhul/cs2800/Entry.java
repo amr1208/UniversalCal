@@ -14,7 +14,6 @@ public class Entry {
   String str;
   Type type;
 
-
   /**
    * Constructor for float entry.
    *
