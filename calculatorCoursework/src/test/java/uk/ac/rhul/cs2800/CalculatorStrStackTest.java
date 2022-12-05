@@ -21,4 +21,11 @@ class CalculatorStrStackTest {
 
   }
 
+  // test 2
+  // check to see whether stack is empty or not.
+  @Test
+  void testEmpty() {
+    assertEquals(strS.isEmpty(), true, "Test to determine numStack is empty.");
+  }
+
 }
