@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import java.lang.IllegalArgumentException;
+import java.util.Objects;
 
 /**
  * Class to organise values stored in a Stack.
@@ -13,6 +14,7 @@ public class Entry {
   Symbol other;
   String str;
   Type type;
+
 
   /**
    * Constructor for float entry.
@@ -102,30 +104,36 @@ public class Entry {
   }
 
   /**
-   * Method to determine a hashcode value.
+   *method that generates a hashcode for the object. Auto-generated code.
    *
-   * @return a hashcode.
+   *@return a hash code value for the object.
    */
   @Override
   public int hashCode() {
-    int n = 0;
-
-    char ch = str.charAt(0);
-    int castAscii = (int) ch;
-    n++;
-    return (int) ((castAscii >> 32) ^ 12 + n);
-
+    return Objects.hash(number, other, str, type);
   }
 
+
+
   /**
-   * Method to compare two instances of Entry class and verify they are equal using attributes.
-   *
-   * @return a boolean to ensure they are equal.
+   * Indicates whether some other object is "equal to" this one. Auto-generated code.
    */
   @Override
-  public boolean equals(Object o) {
-    Entry other = (Entry) o;
-    return ((this.type == other.type) && ((this.str == other.str)));
+  public boolean equals(Object obj) {
+    if (this == obj) {
+
+      return true;
+    }
+    if (obj == null) {
+
+      return false;
+    }
+    if (getClass() != obj.getClass()) {
+      return false;
+    }
+    Entry other = (Entry) obj;
+    return Float.floatToIntBits(number) == Float.floatToIntBits(other.number)
+        && this.other == other.other && Objects.equals(str, other.str) && type == other.type;
   }
 
 }
