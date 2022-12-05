@@ -1,5 +1,7 @@
 package uk.ac.rhul.cs2800;
 
+import java.util.EmptyStackException;
+
 /**
  * This class provides a facade for StrStack.
  *
@@ -38,5 +40,17 @@ public class StrStack {
     Entry str = new Entry(i);
     strStack.push(str);
 
+  }
+
+  /**
+   *method to pop string values off stack.
+   *
+   * @return String or exception
+   */
+  public String strPop() {
+    if (strStack.size == 0) {
+      throw new EmptyStackException();
+    }
+    return null;
   }
 }

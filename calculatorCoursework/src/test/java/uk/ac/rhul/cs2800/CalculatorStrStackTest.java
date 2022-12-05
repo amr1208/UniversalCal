@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +26,24 @@ class CalculatorStrStackTest {
   // check to see whether stack is empty or not.
   @Test
   void testEmpty() {
-    assertEquals(strS.isEmpty(), true, "Test to determine numStack is empty.");
+    assertEquals(strS.isEmpty(), true, "Test to determine strStack is empty.");
+  }
+
+  // test 3
+  // test to see whether string can be pushed onto the stack.
+  // Push function uses entry but there was no constructor for string
+  // in my original push function, created a constructor to fix this
+  @Test
+  void testPush() {
+    strS.push("Hello World");
+    assertEquals(strS.isEmpty(), false, "Test to determine strStack is not empty.");
+  }
+
+  // test 4
+  @Test
+  void emptyPopTest() {
+    assertThrows(EmptyStackException.class, () -> strS.strPop(),
+        "You cannot pop from an empty stack");
   }
 
 }
