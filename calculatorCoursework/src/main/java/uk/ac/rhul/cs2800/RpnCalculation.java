@@ -52,7 +52,7 @@ public class RpnCalculation {
         float snum = this.values.numPop();
         this.values.push(snum - fnum);
       } else if (cur.equals("/")) {
-        float fnum = this.values.numPop();
+        float fnum = this.values.numPop(); //Divides the second number by the first.
         float snum = this.values.numPop();
         this.values.push(snum / fnum);
       } else if (cur.equals("*")) {

@@ -81,10 +81,29 @@ class RpnTest {
   }
 
   @Test
-  // test to see if list split method works for one float and one whole number
+  // test to see if list split method works for one float and one whole number subtraction
   public void testMinusFloats() {
     assertEquals(rpn.evaluate("10 9.5  -"), 0.5, "Test to see floats subtraction");
   }
+  
+  @Test
+  // testing division logic
+  public void testDiv() {
+    assertEquals(rpn.evaluate("12 6 /"), 2, "Division test");
+  }
+
+  @Test
+  // testing division logic
+  public void testNegDiv() {
+    assertEquals(rpn.evaluate("-8 1 /"), -8, "Negative Division test");
+  }
+  
+  @Test
+  // testing multiplication logic
+  public void testMultiple() {
+    assertEquals(rpn.evaluate("8 8 *"), 64, "Multiplication test");
+  }
+  
 
 
 
