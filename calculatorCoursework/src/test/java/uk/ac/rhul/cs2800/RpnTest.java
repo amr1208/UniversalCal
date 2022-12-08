@@ -104,6 +104,13 @@ class RpnTest {
     assertEquals(rpn.evaluate("8 8 *"), 64, "Multiplication test");
   }
   
+  @Test
+  // testing a complex equation to see if all elements work together
+  public void testMultipleOperations() {
+    assertEquals(rpn.evaluate("5 6 7 + * 2 -"), 63, "Complex equation test");
+  }
+
+  
 
 
 

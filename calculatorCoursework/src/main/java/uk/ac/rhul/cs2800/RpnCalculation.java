@@ -22,7 +22,6 @@ public class RpnCalculation {
   }
 
 
-
   /**
    * Method to evaluate given RPN expression.
    *
@@ -56,7 +55,7 @@ public class RpnCalculation {
         float snum = this.values.numPop();
         this.values.push(snum / fnum);
       } else if (cur.equals("*")) {
-        this.values.push(this.values.numPop() * this.values.numPop());
+        this.values.push(this.values.numPop() * this.values.numPop()); //multiplies two numbers
       }
 
 
