@@ -46,11 +46,11 @@ public class OpStack {
    *
    * @return symbol currently on stack
    */
-  public float opPop() {
+  public Symbol opPop() {
     if (opStack.size == 0) {
       throw new EmptyStackException();
     }
-    float result = opStack.pop().getValue();
+    Symbol result = opStack.pop().getSymbol();
     return result;
   }
 
