@@ -37,6 +37,17 @@ public class Entry {
     this.str = String.valueOf(s);
     this.type = Type.SYMBOL;
   }
+  
+  /**
+   * Constructor for String Entry.
+   *
+   * @paramString Value entered by user
+   */
+  public Entry(String s) {
+    this.number = 0f;
+    this.str = s;
+    this.type = Type.STRING;
+  }
 
   // Getters
   /**
