@@ -2,7 +2,9 @@ package uk.ac.rhul.cs2800;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +14,13 @@ class RpnTest {
   @BeforeEach
   void test() {
     rpn = new RpnCalculation();
+  }
+
+  @Test
+  // test to see what happens if text is entered
+  public void invalidInput() {
+    assertThrows(EmptyStackException.class, () -> rpn.evaluate("Hello my name is +"),
+        "Cannot evaluate a string.");
   }
 
   @Test
@@ -51,6 +60,30 @@ class RpnTest {
   // test fails since java requires a value accurate to a large decimal place
   public void testPlusFloats() {
     assertEquals(rpn.evaluate("9.5 10 +"), 19.5, "Test to see floats sum");
+  }
+
+  @Test
+  // test to see if RPNCalculation subtraction works
+  void testMinusNeg() {
+    assertEquals(rpn.evaluate("4 5 -"), -1, "Testing subtracting two numbers");
+  }
+
+  @Test
+  // test to see the effect of subtracting 0 from a number
+  public void testMinusZero() {
+    assertEquals(rpn.evaluate("11 0 -"), 11, "Test to see effect of subtracting zero");
+  }
+
+  @Test
+  // test to demonstrate double digit subtraction
+  public void testMinusDoubleDigits() {
+    assertEquals(rpn.evaluate("90 10 -"), 80, "Test to see double digits substraction");
+  }
+
+  @Test
+  // test to see if list split method works for one float and one whole number
+  public void testMinusFloats() {
+    assertEquals(rpn.evaluate("10 9.5  -"), 0.5, "Test to see floats subtraction");
   }
 
 

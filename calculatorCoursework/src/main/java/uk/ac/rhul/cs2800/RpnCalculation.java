@@ -48,7 +48,7 @@ public class RpnCalculation {
         float resultAdd = Float.sum(this.values.numPop(), this.values.numPop());
         this.values.push(resultAdd);
       } else if (cur.equals("-")) {
-        float fnum = this.values.numPop();
+        float fnum = this.values.numPop(); //subtracts the first number from the second
         float snum = this.values.numPop();
         this.values.push(snum - fnum);
       } else if (cur.equals("/")) {
