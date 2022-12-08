@@ -35,7 +35,7 @@ public class NumStack {
    * @return item at the top of stack
    */
   public float numPop() {
-    if (numStack.size == 0) {
+    if (numStack.size() == 0) {
       throw new EmptyStackException();
     }
     float result = numStack.pop().getValue();
