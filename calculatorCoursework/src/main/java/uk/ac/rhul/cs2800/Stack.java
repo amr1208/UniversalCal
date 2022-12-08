@@ -42,7 +42,7 @@ public class Stack {
       throw new EmptyStackException();
     }
     size = size - 1;
-    return value.get(size);
+    return value.remove(size);
   }
 
   /**
