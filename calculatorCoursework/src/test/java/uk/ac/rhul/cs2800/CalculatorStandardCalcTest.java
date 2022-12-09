@@ -18,6 +18,17 @@ class CalculatorStandardCalcTest {
     assertEquals((!((sc.operatorRank("+")) <= (sc.operatorRankSym(Symbol.LEFT_BRACKET)))), true,
         "Testing whether symbol rank is functional");
   }
+  
+  // test2
+  // Test to see whether simple equation with one operator can be evaluated.
+  @Test
+  void testSimpleCalc() {
+    StandardCalc sc = new StandardCalc();
+    assertEquals(sc.evaluateInfix("5 + 6"), 11,
+        "Evaluation of whether simple equation can be solved.");
+  }
+
+
 
 
 }
