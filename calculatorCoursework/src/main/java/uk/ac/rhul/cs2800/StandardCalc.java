@@ -29,7 +29,7 @@ public class StandardCalc {
     List<String> expressionInfix = Arrays.asList(expression.strip().split(" "));
     int size = expressionInfix.size(); // stores the size of the list
 
-    // loop through list and determines whether entry is a number or an operator
+    // loop through list and determines whether entry is a number or an operator.
     for (int i = 0; i < size; i++) {
       String cur = expressionInfix.get(i);
       try {

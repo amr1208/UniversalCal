@@ -28,6 +28,15 @@ class CalculatorStandardCalcTest {
         "Evaluation of whether simple equation can be solved.");
   }
 
+  // test3
+  // Test to see whether string with one set of brackets could be evaluated properly.
+  @Test
+  void testCalc() {
+    StandardCalc sc = new StandardCalc();
+    assertEquals(sc.evaluateInfix("( 5 * 6 + 7 ) - 2"), 35,
+        "Evaluation of whether simple one bracket equation can be solved.");
+  }
+
 
 
 
