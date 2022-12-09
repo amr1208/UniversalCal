@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 // I was clumspy with commits and completely developed the feature without commiting anything to
 // gitLab.
 // Only error correctly is that error occurs with functions such as -5+10.
+
 class CalculatorStandardCalcTest {
 
   @Test
