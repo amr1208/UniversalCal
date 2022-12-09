@@ -36,6 +36,17 @@ class CalculatorStandardCalcTest {
     assertEquals(sc.evaluateInfix("( 5 * 6 + 7 ) - 2"), 35,
         "Evaluation of whether simple one bracket equation can be solved.");
   }
+  
+  // test4
+  // Test to see whether string with no operator runs.
+  // test does run and pop's value at top of stack, so 5 in this case
+  @Test
+  void testnoOpCalc() {
+    StandardCalc sc = new StandardCalc();
+    assertEquals(sc.evaluateInfix("4 5"), 5,
+        "Evaluation to test program doesn't crash");
+  }
+
 
 
 
