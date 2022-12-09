@@ -142,7 +142,7 @@ public class StandardCalc {
     }
   }
 
-  //// method to assign value to operator based on rank
+  //// method to assign value to operator based on rank.
   int operatorRankSym(Symbol operator) {
     if ((operator.equals(Symbol.LEFT_BRACKET)) || (operator.equals(Symbol.RIGHT_BRACKET))) {
       return 0;

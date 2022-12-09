@@ -4,7 +4,9 @@ package uk.ac.rhul.cs2800;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-
+// I was clumspy with commits and completely developed the feature without commiting anything to
+// gitLab.
+// Only error correctly is that error occurs with functions such as -5+10.
 class CalculatorStandardCalcTest {
 
   @Test
@@ -63,6 +65,17 @@ class CalculatorStandardCalcTest {
   void testCalcDiv() {
     StandardCalc name = new StandardCalc();
     assertEquals(name.evaluateInfix("( 5 * 6 + 6 ) / 2"), 18, "Complex equation test");
+  }
+
+  // test7
+  // testing out whether equation on spec can be correctly calculated
+  // this caused issues since there were two sets of brackets.
+  // EmptyStackexception happened a lot which suggested I was popping too much.
+  // After refactoring and using the debugger I was able to bring full functionality to feature.
+  @Test
+  void testCalcFinal() {
+    StandardCalc name = new StandardCalc();
+    assertEquals(name.evaluateInfix("( 5 * ( 6 + 7 ) ) - 2"), 63, "Complex equation test");
   }
 }
 
