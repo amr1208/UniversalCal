@@ -1,0 +1,4 @@
+This is the first release
+
+Currently the GUI is displayed. There are clear labels, correlating text fields, radio buttons and a button to press.
+No calcualtions currently occur when calcualte button is pressed.
