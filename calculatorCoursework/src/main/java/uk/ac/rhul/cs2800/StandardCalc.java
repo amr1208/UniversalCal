@@ -9,7 +9,7 @@ import java.util.List;
  * @author ayaan
  *
  */
-public class StandardCalc {
+public class StandardCalc implements Calculator {
 
   StrStack numbers = new StrStack();
   OpStack values = new OpStack();
@@ -24,7 +24,8 @@ public class StandardCalc {
    * @param expression entered by user.
    * @return The result of the expression evaluated using infix notation.
    */
-  public float evaluateInfix(String expression) {
+  @Override
+  public float evaluate(String expression) {
 
     List<String> expressionInfix = Arrays.asList(expression.strip().split(" "));
     int size = expressionInfix.size(); // stores the size of the list
@@ -127,6 +128,7 @@ public class StandardCalc {
     stringBuildervarible.append(expressionRpn);
     // reverse is inbuilt method in StringBuilder to use reverse the string
     expressionRpn = stringBuildervarible.reverse().toString();
+    
 
     return rpn.evaluate(expressionRpn);
   }

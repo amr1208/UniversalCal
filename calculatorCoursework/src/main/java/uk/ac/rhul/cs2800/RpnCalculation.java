@@ -10,7 +10,7 @@ import java.util.List;
  * @author ayaan
  *
  */
-public class RpnCalculation {
+public class RpnCalculation implements Calculator  {
   private NumStack values;
 
   /**
@@ -28,7 +28,8 @@ public class RpnCalculation {
    * @param expression given by user.
    * @return Evaluated result of expression.
    */
-  public float evaluate(String expression) {
+  @Override
+  public float evaluate(String expression)  {
     List<String> elemts = Arrays.asList(expression.strip().split(" ")); // stores user string in a
     // list, seperating each entry on white space.
     int size = elemts.size(); // stores the size of the list

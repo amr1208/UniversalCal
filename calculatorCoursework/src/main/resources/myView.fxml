@@ -24,10 +24,10 @@
    <children>
       <RadioButton fx:id="radioInfix" mnemonicParsing="false" onAction="#isSelectedInfix" prefHeight="18.0" prefWidth="58.0" text="Infix" textOverrun="CLIP" translateX="10.0" translateY="-40.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <toggleGroup>
-            <ToggleGroup fx:id="Radio" />
+            <ToggleGroup fx:id="radio" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="radioRp" layoutX="210.0" layoutY="400.0" mnemonicParsing="false" onAction="#isSelectedRpn" prefHeight="22.0" prefWidth="102.0" text="Reverse Polish" textOverrun="CLIP" toggleGroup="$Radio" translateX="80.0" translateY="-40.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="calcButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#isPressed" prefHeight="46.0" prefWidth="93.0" style="-fx-background-color: #E7EEF7;" text="Calculate" textAlignment="CENTER" translateX="50.0" GridPane.columnIndex="1">
+      <RadioButton fx:id="radioRp" layoutX="210.0" layoutY="400.0" mnemonicParsing="false" onAction="#isSelectedRpn" prefHeight="22.0" prefWidth="102.0" text="Reverse Polish" textOverrun="CLIP" toggleGroup="$radio" translateX="80.0" translateY="-40.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="calcButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#isPressed" prefHeight="66.0" prefWidth="143.0" style="-fx-background-color: #E7EEF7;" text="Calculate" textAlignment="CENTER" translateX="30.0" GridPane.columnIndex="1">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>

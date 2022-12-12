@@ -14,7 +14,7 @@ import javafx.scene.control.ToggleGroup;
  *
  */
 public class MyView {
-
+  private CalcModel calc = new CalcModel();
   @FXML
   private Button calcButton;
 
@@ -35,7 +35,15 @@ public class MyView {
 
   @FXML
   void isPressed(ActionEvent event) {
-
+    String expression = fieldExpression.getText();
+    String output = "";
+    try {
+      Float result = calc.evaluate(expression, radioInfix.isSelected());
+      output = result.toString();
+    } catch (Exception e) {
+      output = "Invalid expression! Try again";
+    }
+    fieldResult.setText(output);
   }
 
   @FXML
