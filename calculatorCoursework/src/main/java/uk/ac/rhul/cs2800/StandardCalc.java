@@ -135,21 +135,28 @@ public class StandardCalc {
   int operatorRank(String operator) {
     if ((operator.equals("(")) || (operator.equals(")"))) {
       return 0;
-    } else if ((operator.equals("+")) || (operator.equals("-"))) {
+    } else if ((operator.equals("+"))) {
       return 1;
-    } else {
+    } else if ((operator.equals("-"))) {
       return 2;
+    } else {
+      return 3;
     }
   }
 
-  //// method to assign value to operator based on rank.
+  // method to assign value to operator based on rank.
+  // originally minus and plus had the same priority. This caused issues with trying to
+  // use negative numbers. Now I have provided a more robust priority scheme
+
   int operatorRankSym(Symbol operator) {
     if ((operator.equals(Symbol.LEFT_BRACKET)) || (operator.equals(Symbol.RIGHT_BRACKET))) {
       return 0;
-    } else if ((operator.equals(Symbol.PLUS)) || (operator.equals(Symbol.MINUS))) {
+    } else if ((operator.equals(Symbol.PLUS))) {
       return 1;
-    } else {
+    } else if ((operator.equals(Symbol.MINUS))) {
       return 2;
+    } else {
+      return 3;
     }
 
   }
