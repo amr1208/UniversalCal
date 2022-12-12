@@ -27,7 +27,7 @@ class CalculatorStandardCalcTest {
   @Test
   void testSimpleCalc() {
     StandardCalc sc = new StandardCalc();
-    assertEquals(sc.evaluateInfix("5 + 6"), 11,
+    assertEquals(sc.evaluate("5 + 6"), 11,
         "Evaluation of whether simple equation can be solved.");
   }
 
@@ -38,7 +38,7 @@ class CalculatorStandardCalcTest {
   @Test
   void testCalc() {
     StandardCalc sc = new StandardCalc();
-    assertEquals(sc.evaluateInfix("( 5 * 6 + 7 ) - 2"), 35,
+    assertEquals(sc.evaluate("( 5 * 6 + 7 ) - 2"), 35,
         "Evaluation of whether simple one bracket equation can be solved.");
   }
 
@@ -48,7 +48,7 @@ class CalculatorStandardCalcTest {
   @Test
   void testnoOpCalc() {
     StandardCalc sc = new StandardCalc();
-    assertEquals(sc.evaluateInfix("4 5"), 5, "Evaluation to test program doesn't crash");
+    assertEquals(sc.evaluate("4 5"), 5, "Evaluation to test program doesn't crash");
   }
 
   // test5
@@ -57,7 +57,7 @@ class CalculatorStandardCalcTest {
   @Test
   void testZero() {
     StandardCalc sc = new StandardCalc();
-    assertEquals(sc.evaluateInfix("0 0"), 0, "Test to see if 0 causes an error ");
+    assertEquals(sc.evaluate("0 0"), 0, "Test to see if 0 causes an error ");
   }
 
   // test6
@@ -65,7 +65,7 @@ class CalculatorStandardCalcTest {
   @Test
   void testCalcDiv() {
     StandardCalc name = new StandardCalc();
-    assertEquals(name.evaluateInfix("( 5 * 6 + 6 ) / 2"), 18, "Complex equation test");
+    assertEquals(name.evaluate("( 5 * 6 + 6 ) / 2"), 18, "Complex equation test");
   }
 
   // test7
@@ -76,7 +76,7 @@ class CalculatorStandardCalcTest {
   @Test
   void testCalcFinal() {
     StandardCalc name = new StandardCalc();
-    assertEquals(name.evaluateInfix("( 5 * ( 6 + 7 ) ) - 2"), 63, "Complex equation test");
+    assertEquals(name.evaluate("( 5 * ( 6 + 7 ) ) - 2"), 63, "Complex equation test");
   }
 }
 
