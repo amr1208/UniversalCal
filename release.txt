@@ -2,3 +2,6 @@ This is the first release
 
 Currently the GUI is displayed. There are clear labels, correlating text fields, radio buttons and a button to press.
 No calcualtions currently occur when calcualte button is pressed.
+
+This is the second release
+Building from the first release, GUI now can take in user input and output the evaluated value of the expression. Basic error message is displayed if input is invalid. The application cannot evaluate negative values for infix. 
